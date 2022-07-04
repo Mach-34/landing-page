@@ -1,8 +1,4 @@
-import {
-  BrowserRouter as Router,
-  Route,
-  Routes as DOMRoutes,
-} from 'react-router-dom';
+import { Route, Routes as DOMRoutes } from 'react-router-dom';
 import ScrollToTop from './utils/ScrollToTop';
 import AboutView from './views/About';
 import ContactView from './views/Contact';
