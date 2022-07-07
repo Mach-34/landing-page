@@ -11,8 +11,8 @@ const useStyles = createUseStyles({
     backgroundColor: 'white',
     border: '1px solid #10995A',
     borderRadius: '8px',
+    maxWidth: '500px',
     padding: '24px',
-    width: 'min(500px, 100%)',
   },
   content: {
     marginInline: 'auto',

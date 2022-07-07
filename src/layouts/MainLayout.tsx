@@ -16,8 +16,8 @@ const useStyles = createUseStyles((theme: Mach34Theme) => ({
     zIndex: -1,
   },
   content: {
-    minHeight: 'calc(100vh - 90px)',
-    padding: '100px 16px',
+    minHeight: 'calc(100vh - 240px)',
+    padding: '80px 16px',
   },
   [`@media(min-width: ${theme.breakpoints.sm}px)`]: {
     content: {

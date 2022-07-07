@@ -6,6 +6,11 @@ import Fade from 'react-reveal/Fade';
 
 const useStyles = createUseStyles({
   container: {
+    alignItems: 'center',
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'center',
+    height: 'calc(100vh - 400px)',
     textAlign: 'center',
   },
 });
