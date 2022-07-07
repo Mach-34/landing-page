@@ -20,7 +20,7 @@ type FlexProps = {
   children: ReactNode;
   childFlex?: string;
   cursor?: 'pointer';
-  direction?: 'row' | 'column' | 'row-reverse';
+  direction?: 'row' | 'column' | 'column-reverse' | 'row-reverse';
   justifyContent?:
     | 'flex-start'
     | 'flex-end'

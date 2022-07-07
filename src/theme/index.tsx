@@ -35,6 +35,8 @@ export const breakpoints = {
 //   | 'yellow400';
 
 export type TypographyVariant =
+  | 'heading1'
+  | 'heading2'
   | 'text1'
   | 'text2'
   | 'text3'
@@ -49,7 +51,7 @@ export type TypographyVariant =
 // type ColorVariantMap = { [key in ColorVariant]: string };
 type TypographyVariantMap = { [key in TypographyVariant]: CSSProperties };
 
-export type RigorTheme = {
+export type Mach34Theme = {
   breakpoints: { [key: string]: number };
   typography: {
     paragraph: TypographyVariantMap;
@@ -85,6 +87,16 @@ export type RigorTheme = {
 // };
 
 export const paragraph: TypographyVariantMap = {
+  heading1: {
+    fontSize: '64px',
+    fontWeight: 500,
+    lineHeight: '140%',
+  },
+  heading2: {
+    fontSize: '48px',
+    fontWeight: 500,
+    lineHeight: '140%',
+  },
   text1: {
     fontSize: '40px',
     fontWeight: 500,
@@ -138,6 +150,16 @@ export const paragraph: TypographyVariantMap = {
 };
 
 export const ui: TypographyVariantMap = {
+  heading1: {
+    fontSize: '64px',
+    fontWeight: 500,
+    lineHeight: '100%',
+  },
+  heading2: {
+    fontSize: '48px',
+    fontWeight: 500,
+    lineHeight: '100%',
+  },
   text1: {
     fontSize: '40px',
     fontWeight: 500,
@@ -190,7 +212,7 @@ export const ui: TypographyVariantMap = {
   },
 };
 
-export const theme: RigorTheme = {
+export const theme: Mach34Theme = {
   // color,
   breakpoints,
   typography: {

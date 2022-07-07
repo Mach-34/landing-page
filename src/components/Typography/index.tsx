@@ -1,8 +1,8 @@
 import { CSSProperties, ReactNode } from 'react';
 import { createUseStyles } from 'react-jss';
-import { RigorTheme, TypographyVariant } from 'theme';
+import { Mach34Theme, TypographyVariant } from 'theme';
 
-const useStyles = createUseStyles((theme: RigorTheme) => ({
+const useStyles = createUseStyles((theme: Mach34Theme) => ({
   text: (props: TypographyProps) => ({
     ...theme.typography[props.paragraph ? 'paragraph' : 'ui'][props.variant],
     cursor: props.onClick ? 'pointer' : 'inherit',
