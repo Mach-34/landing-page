@@ -1,6 +1,6 @@
 import Typography from 'components/Typography';
 import { createUseStyles } from 'react-jss';
-import { Linkedin, Youtube } from 'react-bootstrap-icons';
+import { Github, Linkedin, Youtube } from 'react-bootstrap-icons';
 import Flex from 'components/Flex';
 
 const useStyles = createUseStyles({
@@ -27,24 +27,24 @@ export default function Footer(): JSX.Element {
           @ Copyright {new Date().getFullYear()} Mach34
         </Typography>
       </div>
-      <Flex gap='16px'>
-        <Linkedin
-          fill='white'
-          onClick={() =>
-            window.open('https://www.linkedin.com/company/81878456', '_blank')
-          }
-          style={{ cursor: 'pointer' }}
-        />
-        <Youtube
-          fill='white'
-          onClick={() =>
-            window.open(
-              'https://www.youtube.com/channel/UClAhjO4IQzqOSk1u6JGUlLQ',
-              '_blank'
-            )
-          }
-          style={{ cursor: 'pointer' }}
-        />
+      <Flex alignItems='center' gap='16px'>
+        <a href='https://github.com/Mach-34' rel='noreferrer' target='_blank'>
+          <Github fill='white' />
+        </a>
+        <a
+          href='https://www.linkedin.com/company/81878456'
+          rel='noreferrer'
+          target='_blank'
+        >
+          <Linkedin fill='white' />
+        </a>
+        <a
+          href='https://www.youtube.com/channel/UClAhjO4IQzqOSk1u6JGUlLQ'
+          rel='noreferrer'
+          target='_blank'
+        >
+          <Youtube fill='white' />
+        </a>
       </Flex>
     </div>
   );
