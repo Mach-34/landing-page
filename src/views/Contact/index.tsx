@@ -13,10 +13,10 @@ const useStyles = createUseStyles({
   wrapper: {
     backgroundColor: '#10995A',
     borderRadius: '8px',
-    margin: '80px auto 0px auto',
+    marginInline: 'auto',
+    maxWidth: '600px',
     padding: '24px',
     textAlign: 'center',
-    // width: 'min(600px, 100%)',
   },
 });
 

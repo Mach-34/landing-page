@@ -5,6 +5,7 @@ import Flex from 'components/Flex';
 import Typography from 'components/Typography';
 import blitz from 'assets/images/blitz.svg';
 import rigor from 'assets/images/rigor.svg';
+import YouTube from 'react-youtube';
 
 const useStyles = createUseStyles({
   card: {
@@ -45,9 +46,14 @@ export default function PriorWork(): JSX.Element {
         <Rotate bottom right>
           <div className={styles.card} style={{ margin: '32px 0px 0px auto' }}>
             <Flex alignItems='center' gap='16px'>
-              <img alt='Rigor' className={styles.image} src={blitz} />
+              <img alt='Blitz' className={styles.image} src={blitz} />
               <Typography variant='text3'>Blitz</Typography>
             </Flex>
+            <YouTube
+              opts={{ height: '250px', width: '100%' }}
+              style={{ marginTop: '24px' }}
+              videoId='mGz10eDqDgE'
+            />
             <Typography paragraph style={{ marginTop: '24px' }} variant='body1'>
               Lorum impsum impsum impsum impsum impsum impsum impsum impsum
               impsum impsum impsum impsum impsum impsum impsum impsum impsum

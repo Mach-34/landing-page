@@ -4,13 +4,13 @@ import { Mach34Theme } from 'theme';
 
 const useStyles = createUseStyles((theme: Mach34Theme) => ({
   container: {
-    ...theme.typography.ui.text4,
+    ...theme.typography.ui.text5,
     backgroundColor: 'white',
-    border: '2px solid black',
+    border: 'none',
     borderRadius: '4px',
-    color: 'black',
+    color: '#10995A',
     cursor: 'pointer',
-    padding: '8px 12px',
+    padding: '12px 15px',
   },
 }));
 
