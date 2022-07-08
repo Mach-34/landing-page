@@ -49,15 +49,34 @@ export default function PriorWork(): JSX.Element {
               <img alt='Blitz' className={styles.image} src={blitz} />
               <Typography variant='text3'>Blitz</Typography>
             </Flex>
+            <Typography
+              paragraph
+              variant='body1'
+              style={{ color: '#10995A', marginTop: '8px' }}
+            >
+              <b>
+                "...the product was a super competitive product on the
+                market...would definitely recommend these guys if you're looking
+                to build out a product in crypto or web3" - Myth, Owner of Blitz
+              </b>
+            </Typography>
             <YouTube
               opts={{ height: '250px', width: '100%' }}
               style={{ marginTop: '24px' }}
               videoId='mGz10eDqDgE'
             />
             <Typography paragraph style={{ marginTop: '24px' }} variant='body1'>
-              Lorum impsum impsum impsum impsum impsum impsum impsum impsum
-              impsum impsum impsum impsum impsum impsum impsum impsum impsum
-              impsum impsum impsum impsum impsum impsum impsum impsum impsum ...
+              Mach34's first official client, Blitz, was an MVP for a Magic Eden
+              (Solana) NFT sniper web app. With our help, Blitz went from an
+              idea to a serious threat to existing SaaS Solana NFT token snipers
+              on the market. To build a superior product, we abstracted
+              different ETL steps across an AWS serverless stack designed to
+              maximize availability and reliability regardless of transaction
+              throughput or Blitz user volume.
+              <br />
+              <br />
+              Services: Software Engineering, R&D, Cloud, Blockchain ETL, React,
+              Backend/ API
             </Typography>
           </div>
         </Rotate>
