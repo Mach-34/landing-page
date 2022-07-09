@@ -12,7 +12,7 @@ const useStyles = createUseStyles({
     backgroundColor: 'white',
     border: '1px solid #10995A',
     borderRadius: '8px',
-    maxWidth: '500px',
+    maxWidth: '600px',
     padding: '24px',
   },
   content: {
@@ -32,19 +32,6 @@ export default function PriorWork(): JSX.Element {
       <div className={styles.content}>
         <Rotate left top>
           <div className={styles.card}>
-            <Flex alignItems='center' gap='16px'>
-              <img alt='Rigor' className={styles.image} src={rigor} />
-              <Typography variant='text3'>Rigor</Typography>
-            </Flex>
-            <Typography paragraph style={{ marginTop: '24px' }} variant='body1'>
-              Lorum impsum impsum impsum impsum impsum impsum impsum impsum
-              impsum impsum impsum impsum impsum impsum impsum impsum impsum
-              impsum impsum impsum impsum impsum impsum impsum impsum impsum ...
-            </Typography>
-          </div>
-        </Rotate>
-        <Rotate bottom right>
-          <div className={styles.card} style={{ margin: '32px 0px 0px auto' }}>
             <Flex alignItems='center' gap='16px'>
               <img alt='Blitz' className={styles.image} src={blitz} />
               <Typography variant='text3'>Blitz</Typography>
@@ -77,6 +64,21 @@ export default function PriorWork(): JSX.Element {
               <br />
               Services: Software Engineering, R&D, Cloud, Blockchain ETL, React,
               Backend/ API
+            </Typography>
+          </div>
+        </Rotate>
+        <Rotate bottom right>
+          <div className={styles.card} style={{ margin: '32px 0px 0px auto' }}>
+            <Flex alignItems='center' gap='16px'>
+              <img alt='Rigor' className={styles.image} src={rigor} />
+              <Typography variant='text3'>Rigor</Typography>
+            </Flex>
+            <Typography
+              paragraph
+              style={{ marginTop: '12px', textAlign: 'center' }}
+              variant='text3'
+            >
+              Coming soon...
             </Typography>
           </div>
         </Rotate>
