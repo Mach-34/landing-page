@@ -29,21 +29,21 @@ export default function Home(): JSX.Element {
           style={{
             color: '#10995A',
             margin: '32px auto 0px auto',
-            maxWidth: '600px',
+            maxWidth: '800px',
           }}
           variant='text4'
         >
           <Fade bottom delay={1000}>
             <Flex gap='8px' justifyContent='center' wrap='wrap'>
-              <div>Ceramic</div>
-              <div>·</div>
-              <div>React</div>
-              <div>·</div>
-              <div>Smart Contracts</div>
-              <div>·</div>
-              <div>Subgraph</div>
-              <div>·</div>
               <div>Zero Knowledge</div>
+              <div>-</div>
+              <div>Smart Contracts</div>
+              <div>-</div>
+              <div>Subgraph</div>
+              <div>-</div>
+              <div>Ceramic</div>
+              <div>-</div>
+              <div>React</div>
             </Flex>
           </Fade>
         </Typography>
