@@ -23,13 +23,13 @@ textarea {
 }
 
 @font-face {
-  font-family: "Heebo";
-  src: url(./fonts/Heebo-Regular.ttf) format("truetype");
+  font-family: "Prism";
+  src: url(./fonts/Prism-Regular.ttf) format("truetype");
   font-weight: 400;
 }
 
 @font-face {
-  font-family: "Heebo";
-  src: url(./fonts/Heebo-Medium.ttf) format("truetype");
+  font-family: "Prism";
+  src: url(./fonts/Prism-Regular.ttf) format("truetype");
   font-weight: 500;
 }
