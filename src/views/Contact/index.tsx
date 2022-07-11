@@ -1,10 +1,13 @@
-import { useState } from 'react';
+import { useMemo, useState } from 'react';
 import Input from 'components/Input';
 import Typography from 'components/Typography';
 import MainLayout from 'layouts/MainLayout';
 import { createUseStyles } from 'react-jss';
 import Fade from 'react-reveal/Fade';
 import Button from 'components/Button';
+import axios from 'axios';
+
+const { REACT_APP_AIRTABLE_API_KEY: AIRTABLE_KEY } = process.env;
 
 const useStyles = createUseStyles({
   inputs: {
@@ -22,9 +25,45 @@ const useStyles = createUseStyles({
 
 export default function Contact(): JSX.Element {
   const styles = useStyles();
+  const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
   const [name, setName] = useState('');
   const [organization, setOrganization] = useState('');
+
+  const clear = () => {
+    setEmail('');
+    setMessage('');
+    setName('');
+    setOrganization('');
+  };
+
+  const disabled = useMemo(() => {
+    return !email || !message || !name || !organization;
+  }, [email, message, name, organization]);
+
+  const saveResponse = async () => {
+    const headers = {
+      Authorization: `Bearer ${AIRTABLE_KEY}`,
+      'Content-Type': 'application/json',
+    };
+    const data = {
+      fields: {
+        Email: email,
+        Message: message,
+        Name: name,
+        Organization: organization,
+      },
+    };
+    await axios.post(
+      'https://api.airtable.com/v0/appYcw478ja5MA2Fr/Users',
+      data,
+      {
+        headers,
+      }
+    );
+    clear();
+  };
+
   return (
     <MainLayout>
       <Fade>
@@ -40,6 +79,14 @@ export default function Contact(): JSX.Element {
               placeholder='Name'
               style={{ marginTop: '24px' }}
               value={name}
+            />
+            <Input
+              id='contact-email'
+              label='Email'
+              onChange={(e) => setEmail(e.target.value)}
+              placeholder='Email'
+              style={{ marginTop: '24px' }}
+              value={email}
             />
             <Input
               id='contact-organization'
@@ -61,7 +108,8 @@ export default function Contact(): JSX.Element {
             />
           </div>
           <Button
-            onChange={() => null}
+            disabled={disabled}
+            onChange={() => saveResponse()}
             style={{ marginTop: '24px' }}
             text='Send'
           />
