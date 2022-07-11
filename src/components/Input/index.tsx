@@ -12,6 +12,7 @@ const useStyles = createUseStyles((theme: Mach34Theme) => ({
     borderRadius: '4px',
     padding: '8px 4px',
     outline: 'transparent',
+    textIndent: '2px',
     transition: '.3s border',
     width: '100%',
     '&:focus': {
