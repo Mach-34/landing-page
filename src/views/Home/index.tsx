@@ -22,7 +22,7 @@ export default function Home(): JSX.Element {
       <div className={styles.container}>
         <Typography style={{ color: '#10995A' }} variant='heading1'>
           <Fade bottom cascade>
-            Mach 34
+            Mach34
           </Fade>
         </Typography>
         <Typography
