@@ -7,6 +7,7 @@ import {
   ContactLocation,
   PriorWorkLocation,
   RootLocation,
+  TeamLocation,
 } from 'Locations';
 import Flex from 'components/Flex';
 import Typography from 'components/Typography';
@@ -44,6 +45,7 @@ const useStyles = createUseStyles((theme: Mach34Theme) => ({
 
 const links = [
   { location: PriorWorkLocation, text: 'Prior work' },
+  { location: TeamLocation, text: 'Team' },
   { location: AboutLocation, text: 'About' },
   { location: ContactLocation, text: 'Contact' },
 ];

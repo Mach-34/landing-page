@@ -4,11 +4,13 @@ import AboutView from './views/About';
 import ContactView from './views/Contact';
 import HomeView from './views/Home';
 import PriorWorkView from 'views/PriorWork';
+import TeamView from 'views/Team';
 import {
   AboutLocation,
   ContactLocation,
   PriorWorkLocation,
   RootLocation,
+  TeamLocation,
 } from './Locations';
 
 export default function Routes(): JSX.Element {
@@ -28,6 +30,10 @@ export default function Routes(): JSX.Element {
     {
       component: <PriorWorkView />,
       path: PriorWorkLocation,
+    },
+    {
+      component: <TeamView />,
+      path: TeamLocation,
     },
   ];
 

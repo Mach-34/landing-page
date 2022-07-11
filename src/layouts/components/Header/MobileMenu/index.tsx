@@ -2,7 +2,12 @@ import { createUseStyles } from 'react-jss';
 import logo from 'assets/images/logo.png';
 import { X } from 'react-bootstrap-icons';
 import { useEffect } from 'react';
-import { AboutLocation, ContactLocation, PriorWorkLocation } from 'Locations';
+import {
+  AboutLocation,
+  ContactLocation,
+  PriorWorkLocation,
+  TeamLocation,
+} from 'Locations';
 import Flex from 'components/Flex';
 import Typography from 'components/Typography';
 import { useNavigate } from 'react-router-dom';
@@ -61,6 +66,7 @@ export default function MobileMenu({
 
   const links = [
     { location: PriorWorkLocation, text: 'Prior work' },
+    { location: TeamLocation, text: 'Team' },
     { location: AboutLocation, text: 'About' },
     { location: ContactLocation, text: 'Contact' },
   ];
