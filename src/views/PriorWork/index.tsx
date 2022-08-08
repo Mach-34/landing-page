@@ -51,7 +51,7 @@ export default function PriorWork(): JSX.Element {
             <YouTube
               opts={{ height: '250px', width: '100%' }}
               style={{ marginTop: '24px' }}
-              videoId='mGz10eDqDgE'
+              videoId='nH3AIaD_qYk'
             />
             <Typography paragraph style={{ marginTop: '24px' }} variant='body1'>
               Mach34's first official client, Blitz, was an MVP for a Magic Eden
