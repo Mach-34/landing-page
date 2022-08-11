@@ -10,13 +10,13 @@ const browserHistory = createBrowserHistory();
 
 ReactGA.initialize(process.env.REACT_APP_GOOGLE_TRACKING_ID ?? '');
 ReactGA.send({
-  hitPath: 'pageview',
+  hitType: 'pageview',
   page: window.location.pathname + window.location.search,
 });
 
 browserHistory.listen((location: any) => {
   ReactGA.set({ page: location.pathname });
-  ReactGA.send({ hitPath: 'pageview', page: location.pathname });
+  ReactGA.send({ hitType: 'pageview', page: location.pathname });
 });
 
 function App() {
