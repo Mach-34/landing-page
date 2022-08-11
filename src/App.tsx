@@ -8,7 +8,7 @@ import { createBrowserHistory } from 'history';
 
 const browserHistory = createBrowserHistory();
 
-ReactGA.initialize(process.env.REACT_APP_GOOGLE_TRACKING_ID ?? '');
+ReactGA.initialize('G-LDG40HQ7JK');
 ReactGA.pageview(window.location.pathname + window.location.search);
 
 browserHistory.listen((location: any) => {
