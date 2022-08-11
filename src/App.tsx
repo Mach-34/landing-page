@@ -1,4 +1,4 @@
-import ReactGA from 'react-ga';
+import ReactGA from 'react-ga4';
 import Routes from './Routes';
 import { BrowserRouter as Router } from 'react-router-dom';
 import { ThemeProvider } from 'react-jss';
@@ -8,12 +8,15 @@ import { createBrowserHistory } from 'history';
 
 const browserHistory = createBrowserHistory();
 
-ReactGA.initialize('G-LDG40HQ7JK');
-ReactGA.pageview(window.location.pathname + window.location.search);
+ReactGA.initialize(process.env.REACT_APP_GOOGLE_TRACKING_ID ?? '');
+ReactGA.send({
+  hitPath: 'pageview',
+  page: window.location.pathname + window.location.search,
+});
 
 browserHistory.listen((location: any) => {
   ReactGA.set({ page: location.pathname });
-  ReactGA.pageview(location.pathname);
+  ReactGA.send({ hitPath: 'pageview', page: location.pathname });
 });
 
 function App() {
