@@ -37,6 +37,7 @@ export default function MainLayout({ children }: MainLayoutProps): JSX.Element {
   const location = useLocation();
 
   useEffect(() => {
+    ReactGA.initialize(process.env.REACT_APP_GOOGLE_TRACKING_ID ?? '');
     ReactGA.send({ hitType: 'pageview', page: location.pathname });
   }, [location]);
 
