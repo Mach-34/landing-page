@@ -92,7 +92,11 @@ export default function MobileMenu({
           style={{ height: '100%', textAlign: 'center' }}
         >
           {links.map((link) => (
-            <Typography onClick={() => navigate(link.location)} variant='text5'>
+            <Typography
+              onClick={() => navigate(link.location)}
+              key={link.text}
+              variant='text5'
+            >
               {link.text}
             </Typography>
           ))}

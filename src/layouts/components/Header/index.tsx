@@ -74,6 +74,7 @@ export default function Header(): JSX.Element {
             {links.map((link) => (
               <Typography
                 onClick={() => navigate(link.location)}
+                key={link.text}
                 variant='text5'
               >
                 {link.text}
