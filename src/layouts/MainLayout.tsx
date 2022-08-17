@@ -1,9 +1,11 @@
-import { ReactNode } from 'react';
+import { ReactNode, useEffect } from 'react';
 import Header from './components/Header';
 import { createUseStyles } from 'react-jss';
 import { Mach34Theme } from 'theme';
 import logo from 'assets/images/logo.png';
 import Footer from './components/Footer';
+import ReactGa from 'react-ga4';
+import { useLocation } from 'react-router-dom';
 
 const useStyles = createUseStyles((theme: Mach34Theme) => ({
   backgroundImage: {
@@ -31,7 +33,12 @@ type MainLayoutProps = {
 };
 
 export default function MainLayout({ children }: MainLayoutProps): JSX.Element {
+  const location = useLocation();
   const styles = useStyles();
+
+  useEffect(() => {
+    ReactGa.send({ hitType: 'pageview', path: location.pathname });
+  }, [location]);
 
   return (
     <div style={{ position: 'relative' }}>
