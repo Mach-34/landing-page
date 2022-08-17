@@ -5,7 +5,7 @@ import { useNavigate } from 'react-router-dom';
 import {
   AboutLocation,
   ContactLocation,
-  PriorWorkLocation,
+  PortfolioLocation,
   RootLocation,
   TeamLocation,
 } from 'Locations';
@@ -44,7 +44,7 @@ const useStyles = createUseStyles((theme: Mach34Theme) => ({
 }));
 
 const links = [
-  { location: PriorWorkLocation, text: 'Prior work' },
+  { location: PortfolioLocation, text: 'Portfolio' },
   { location: TeamLocation, text: 'Team' },
   { location: AboutLocation, text: 'About' },
   { location: ContactLocation, text: 'Contact' },

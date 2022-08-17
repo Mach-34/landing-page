@@ -3,12 +3,12 @@ import ScrollToTop from './utils/ScrollToTop';
 import AboutView from './views/About';
 import ContactView from './views/Contact';
 import HomeView from './views/Home';
-import PriorWorkView from 'views/PriorWork';
+import PortfolioView from 'views/Portfolio';
 import TeamView from 'views/Team';
 import {
   AboutLocation,
   ContactLocation,
-  PriorWorkLocation,
+  PortfolioLocation,
   RootLocation,
   TeamLocation,
 } from './Locations';
@@ -28,8 +28,8 @@ export default function Routes(): JSX.Element {
       path: ContactLocation,
     },
     {
-      component: <PriorWorkView />,
-      path: PriorWorkLocation,
+      component: <PortfolioView />,
+      path: PortfolioLocation,
     },
     {
       component: <TeamView />,

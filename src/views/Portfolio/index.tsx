@@ -26,7 +26,7 @@ const useStyles = createUseStyles({
   },
 });
 
-export default function PriorWork(): JSX.Element {
+export default function Portfolio(): JSX.Element {
   const location = useLocation();
   const styles = useStyles();
 

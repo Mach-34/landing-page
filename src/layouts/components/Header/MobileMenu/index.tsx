@@ -5,7 +5,7 @@ import { useEffect } from 'react';
 import {
   AboutLocation,
   ContactLocation,
-  PriorWorkLocation,
+  PortfolioLocation,
   TeamLocation,
 } from 'Locations';
 import Flex from 'components/Flex';
@@ -65,7 +65,7 @@ export default function MobileMenu({
   const styles = useStyles({ open });
 
   const links = [
-    { location: PriorWorkLocation, text: 'Prior work' },
+    { location: PortfolioLocation, text: 'Portfolio' },
     { location: TeamLocation, text: 'Team' },
     { location: AboutLocation, text: 'About' },
     { location: ContactLocation, text: 'Contact' },
