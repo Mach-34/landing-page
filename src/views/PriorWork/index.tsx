@@ -1,4 +1,4 @@
-import { MutableRefObject, useEffect, useRef } from 'react';
+import { useEffect } from 'react';
 import MainLayout from 'layouts/MainLayout';
 import { createUseStyles } from 'react-jss';
 import Flex from 'components/Flex';
@@ -6,7 +6,6 @@ import Typography from 'components/Typography';
 import battlezips from 'assets/images/battlezips.png';
 import blitz from 'assets/images/blitz.svg';
 import rigor from 'assets/images/rigor.svg';
-import YouTube from 'react-youtube';
 import { useLocation } from 'react-router-dom';
 
 const useStyles = createUseStyles({
@@ -29,29 +28,20 @@ const useStyles = createUseStyles({
 
 export default function PriorWork(): JSX.Element {
   const location = useLocation();
-  const blitzRef = useRef<HTMLDivElement | null>(null);
-  const zipsRef = useRef<HTMLDivElement | null>(null);
   const styles = useStyles();
 
   useEffect(() => {
-    const refMap: { [key: string]: MutableRefObject<any> } = {
-      battlezips: zipsRef,
-      blitz: blitzRef,
-    };
-
-    const hashRef = refMap[location.hash.slice(1)];
-
-    if (location.hash && hashRef) {
-      hashRef.current.scrollIntoView({
-        behavior: 'smooth',
-      });
+    // TODO: Change to ref
+    if (location.hash) {
+      const el = document.getElementById(location.hash.slice(1));
+      el?.scrollIntoView({ behavior: 'smooth', block: 'center' });
     }
-  }, [blitzRef, location, zipsRef]);
+  }, [location]);
 
   return (
     <MainLayout>
       <div className={styles.content}>
-        <div className={styles.card} ref={(el) => (blitzRef.current = el)}>
+        <div className={styles.card} id='blitz'>
           <Flex alignItems='center' gap='16px'>
             <img alt='Blitz' className={styles.image} src={blitz} />
             <Typography variant='text3'>Blitz</Typography>
@@ -67,11 +57,13 @@ export default function PriorWork(): JSX.Element {
               to build out a product in crypto or web3" - Myth, Owner of Blitz
             </b>
           </Typography>
-          <YouTube
-            onReady={() => console.log('READY')}
-            opts={{ height: '250px', width: '100%' }}
-            style={{ marginTop: '24px' }}
-            videoId='nH3AIaD_qYk'
+          <iframe
+            allowFullScreen
+            height='250px'
+            src='https://www.youtube.com/embed/nH3AIaD_qYk'
+            style={{ border: 'none', marginTop: '24px' }}
+            title='Battlezips'
+            width='100%'
           />
           <Typography paragraph style={{ marginTop: '24px' }} variant='body1'>
             Mach34's first official client, Blitz, was an MVP for a Magic Eden
@@ -89,7 +81,7 @@ export default function PriorWork(): JSX.Element {
         </div>
         <div
           className={styles.card}
-          ref={(el) => (zipsRef.current = el)}
+          id='battlezips'
           style={{ margin: '32px 0px 0px auto' }}
         >
           <Flex alignItems='center' gap='16px'>
@@ -112,10 +104,13 @@ export default function PriorWork(): JSX.Element {
               </a>
             </b>
           </Typography>
-          <YouTube
-            opts={{ height: '250px', width: '100%' }}
-            style={{ marginTop: '24px' }}
-            videoId='wAFJ1mJO0d0'
+          <iframe
+            allowFullScreen
+            height='250px'
+            src='https://www.youtube.com/embed/wAFJ1mJO0d0'
+            style={{ border: 'none', marginTop: '24px' }}
+            title='Battlezips'
+            width='100%'
           />
           <Typography paragraph style={{ marginTop: '24px' }} variant='body1'>
             <a href='https://github.com/jp4g/battlezips'>BattleZips</a> is a
