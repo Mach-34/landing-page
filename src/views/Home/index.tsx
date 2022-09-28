@@ -1,4 +1,3 @@
-import Flex from 'components/Flex';
 import Typography from 'components/Typography';
 import MainLayout from 'layouts/MainLayout';
 import { createUseStyles } from 'react-jss';
@@ -26,25 +25,19 @@ export default function Home(): JSX.Element {
           </Fade>
         </Typography>
         <Typography
+          paragraph
           style={{
             color: '#10995A',
             margin: '32px auto 0px auto',
-            maxWidth: '800px',
+            maxWidth: '600px',
           }}
           variant='text4'
         >
           <Fade bottom delay={1000}>
-            <Flex gap='8px' justifyContent='center' wrap='wrap'>
-              <div>Zero Knowledge</div>
-              <div>-</div>
-              <div>Smart Contracts</div>
-              <div>-</div>
-              <div>Subgraph</div>
-              <div>-</div>
-              <div>Ceramic</div>
-              <div>-</div>
-              <div>React</div>
-            </Flex>
+            <div>
+              A full-stack web3 consultancy specializing in applied zero
+              knowledge cryptography
+            </div>
           </Fade>
         </Typography>
       </div>
