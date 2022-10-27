@@ -125,8 +125,7 @@ export default function Portfolio(): JSX.Element {
             and BattleZips, but BattleZips is not a Mach 34 project. No
             organization that affiliates with BattleZips should also be
             perceived as affiliating with Mach 34. BattleZips is open source
-            as licensed under CC-BY-SA 4.0 (V1) and GNU GPLv3 (V2). 
-            
+            as licensed under CC-BY-SA 4.0 (V1) and GNU GPLv3 (V2).
             <br />
             <br />
             Services: Zero Knowledge, Cryptography, Smart Contracts, Subgraphs,
