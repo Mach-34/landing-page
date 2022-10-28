@@ -120,7 +120,7 @@ export default function Portfolio(): JSX.Element {
             was built as a demonstration to ourselves and others of our
             capability in applying zero knowledge to arbitrary business logic.
             BattleZips Privacy Stack presented February 2022 at EthDenver.
-
+            <br />
             Disclaimer: The same individuals comprise the teams of Mach 34 
             and BattleZips, but BattleZips is not a Mach 34 project. No
             organization that affiliates with BattleZips should also be
