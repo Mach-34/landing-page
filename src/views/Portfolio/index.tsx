@@ -41,7 +41,36 @@ export default function Portfolio(): JSX.Element {
   return (
     <MainLayout>
       <div className={styles.content}>
-        <div className={styles.card} id='blitz'>
+        <div className={styles.card}>
+          <Flex alignItems='center' gap='16px'>
+            <img alt='Rigor' className={styles.image} src={rigor} />
+            <Typography variant='text3'>Rigor</Typography>
+          </Flex>
+          <iframe
+            allowFullScreen
+            height='250px'
+            src='https://www.youtube.com/embed/JW0tFoB8TBs'
+            style={{ border: 'none', marginTop: '24px' }}
+            title='Rigor'
+            width='100%'
+          />
+          <Typography paragraph style={{ marginTop: '24px' }} variant='body1'>
+            <a href='https://rigor.build/'>Rigor</a> is a home construction ERP
+            and invoice factoring solution settled on the Ethereum blockchain.
+            Mach 34 had the privilege of developing the proof of concept for
+            Rigor as their first consultation. In the nearly 2 years since
+            delivery, Rigor has raised over $3.5 million, hired an in-house dev
+            team, and begun selling homes whose construction was financed and
+            managed via Rigor's production beta software. Check out the video
+            testimonial from the client to hear more about how Mach 34 can help
+            you bring your innovative web3 product ideas into reality!
+          </Typography>
+        </div>
+        <div
+          className={styles.card}
+          id='blitz'
+          style={{ margin: '32px 0px 0px auto' }}
+        >
           <Flex alignItems='center' gap='16px'>
             <img alt='Blitz' className={styles.image} src={blitz} />
             <Typography variant='text3'>Blitz</Typography>
@@ -66,13 +95,12 @@ export default function Portfolio(): JSX.Element {
             width='100%'
           />
           <Typography paragraph style={{ marginTop: '24px' }} variant='body1'>
-            Mach34's first official client, Blitz, was an MVP for a Magic Eden
-            (Solana) NFT sniper web app. With our help, Blitz went from an idea
-            to a serious threat to existing SaaS Solana NFT token snipers on the
-            market. To build a superior product, we abstracted different ETL
-            steps across an AWS serverless stack designed to maximize
-            availability and reliability regardless of transaction throughput or
-            Blitz user volume.
+            Blitz, was an MVP for a Magic Eden (Solana) NFT sniper web app. With
+            our help, Blitz went from an idea to a serious threat to existing
+            SaaS Solana NFT token snipers on the market. To build a superior
+            product, we abstracted different ETL steps across an AWS serverless
+            stack designed to maximize availability and reliability regardless
+            of transaction throughput or Blitz user volume.
             <br />
             <br />
             Services: Software Engineering, R&D, Cloud, Blockchain ETL, React,
@@ -82,7 +110,7 @@ export default function Portfolio(): JSX.Element {
         <div
           className={styles.card}
           id='battlezips'
-          style={{ margin: '32px 0px 0px auto' }}
+          style={{ marginTop: '32px' }}
         >
           <Flex alignItems='center' gap='16px'>
             <img
@@ -120,29 +148,15 @@ export default function Portfolio(): JSX.Element {
             was built as a demonstration to ourselves and others of our
             capability in applying zero knowledge to arbitrary business logic.
             BattleZips Privacy Stack presented February 2022 at EthDenver.
-
-            Disclaimer: The same individuals comprise the teams of Mach 34 
-            and BattleZips, but BattleZips is not a Mach 34 project. No
-            organization that affiliates with BattleZips should also be
-            perceived as affiliating with Mach 34. BattleZips is open source
-            as licensed under CC-BY-SA 4.0 (V1) and GNU GPLv3 (V2).
+            Disclaimer: The same individuals comprise the teams of Mach 34 and
+            BattleZips, but BattleZips is not a Mach 34 project. No organization
+            that affiliates with BattleZips should also be perceived as
+            affiliating with Mach 34. BattleZips is open source as licensed
+            under CC-BY-SA 4.0 (V1) and GNU GPLv3 (V2).
             <br />
             <br />
             Services: Zero Knowledge, Cryptography, Smart Contracts, Subgraphs,
             Metatransactions, IPFS, R&D
-          </Typography>
-        </div>
-        <div className={styles.card} style={{ marginTop: '32px' }}>
-          <Flex alignItems='center' gap='16px'>
-            <img alt='Rigor' className={styles.image} src={rigor} />
-            <Typography variant='text3'>Rigor</Typography>
-          </Flex>
-          <Typography
-            paragraph
-            style={{ marginTop: '12px', textAlign: 'center' }}
-            variant='text3'
-          >
-            Coming soon...
           </Typography>
         </div>
       </div>

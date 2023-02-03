@@ -1,73 +1,87 @@
-import { useMemo, useState } from 'react';
-import Input from 'components/Input';
-import Typography from 'components/Typography';
+// import { useState } from 'react';
+// import Input from 'components/Input';
+// import Typography from 'components/Typography';
 import MainLayout from 'layouts/MainLayout';
 import { createUseStyles } from 'react-jss';
 import Fade from 'react-reveal/Fade';
-import Button from 'components/Button';
-import axios from 'axios';
+// import Button from 'components/Button';
+// import axios from 'axios';
 
-const { REACT_APP_AIRTABLE_API_KEY: AIRTABLE_KEY } = process.env;
+// const { REACT_APP_AIRTABLE_API_KEY: AIRTABLE_KEY } = process.env;
 
 const useStyles = createUseStyles({
-  inputs: {
-    marginInline: 'auto',
-  },
-  wrapper: {
-    backgroundColor: '#10995A',
+  container: {
+    backgroundColor: 'white',
+    border: '1px solid #10995A',
     borderRadius: '8px',
-    marginInline: 'auto',
-    maxWidth: '600px',
+    lineHeight: '24px',
+    margin: '150px auto 0px auto',
+    maxWidth: '550px',
     padding: '24px',
     textAlign: 'center',
   },
+  // inputs: {
+  //   marginInline: 'auto',
+  // },
+  // wrapper: {
+  //   backgroundColor: '#10995A',
+  //   borderRadius: '8px',
+  //   marginInline: 'auto',
+  //   maxWidth: '600px',
+  //   padding: '24px',
+  //   textAlign: 'center',
+  // },
 });
 
 export default function Contact(): JSX.Element {
   const styles = useStyles();
-  const [email, setEmail] = useState('');
-  const [message, setMessage] = useState('');
-  const [name, setName] = useState('');
-  const [organization, setOrganization] = useState('');
+  // const [email, setEmail] = useState('');
+  // const [message, setMessage] = useState('');
+  // const [name, setName] = useState('');
+  // const [organization, setOrganization] = useState('');
 
-  const clear = () => {
-    setEmail('');
-    setMessage('');
-    setName('');
-    setOrganization('');
-  };
+  // const clear = () => {
+  //   setEmail('');
+  //   setMessage('');
+  //   setName('');
+  //   setOrganization('');
+  // };
 
-  const disabled = useMemo(() => {
-    return !email || !message || !name || !organization;
-  }, [email, message, name, organization]);
+  // const disabled = useMemo(() => {
+  //   return !email || !message || !name || !organization;
+  // }, [email, message, name, organization]);
 
-  const saveResponse = async () => {
-    const headers = {
-      Authorization: `Bearer ${AIRTABLE_KEY}`,
-      'Content-Type': 'application/json',
-    };
-    const data = {
-      fields: {
-        Email: email,
-        Message: message,
-        Name: name,
-        Organization: organization,
-      },
-    };
-    await axios.post(
-      'https://api.airtable.com/v0/appYcw478ja5MA2Fr/Users',
-      data,
-      {
-        headers,
-      }
-    );
-    clear();
-  };
+  // const saveResponse = async () => {
+  //   const headers = {
+  //     Authorization: `Bearer ${AIRTABLE_KEY}`,
+  //     'Content-Type': 'application/json',
+  //   };
+  //   const data = {
+  //     fields: {
+  //       Email: email,
+  //       Message: message,
+  //       Name: name,
+  //       Organization: organization,
+  //     },
+  //   };
+  //   await axios.post(
+  //     'https://api.airtable.com/v0/appYcw478ja5MA2Fr/Users',
+  //     data,
+  //     {
+  //       headers,
+  //     }
+  //   );
+  //   clear();
+  // };
 
   return (
     <MainLayout>
       <Fade>
-        <div className={styles.wrapper}>
+        <div className={styles.container}>
+          Get in touch by reaching out via email to{' '}
+          <a href='mailto:contact@mach34.space'>contact@mach34.space</a>
+        </div>
+        {/* <div className={styles.wrapper}>
           <Typography style={{ color: 'white' }} variant='text3'>
             Contact
           </Typography>
@@ -113,7 +127,7 @@ export default function Contact(): JSX.Element {
             style={{ marginTop: '24px' }}
             text='Send'
           />
-        </div>
+        </div> */}
       </Fade>
     </MainLayout>
   );
