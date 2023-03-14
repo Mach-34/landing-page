@@ -3,6 +3,7 @@ import MainLayout from 'layouts/MainLayout';
 import { createUseStyles } from 'react-jss';
 import Flex from 'components/Flex';
 import Typography from 'components/Typography';
+import aztec from 'assets/images/aztec.jpeg';
 import battlezips from 'assets/images/battlezips.png';
 import blitz from 'assets/images/blitz.svg';
 import rigor from 'assets/images/rigor.svg';
@@ -21,6 +22,7 @@ const useStyles = createUseStyles({
     maxWidth: '1000px',
   },
   image: {
+    borderRadius: '8px',
     height: '40px',
     width: '40px',
   },
@@ -66,11 +68,41 @@ export default function Portfolio(): JSX.Element {
             you bring your innovative web3 product ideas into reality!
           </Typography>
         </div>
-        <div
-          className={styles.card}
-          id='blitz'
-          style={{ margin: '32px 0px 0px auto' }}
-        >
+        <div className={styles.card} style={{ margin: '32px 0px 0px auto' }}>
+          <Flex alignItems='center' gap='16px'>
+            <img alt='Aztec' className={styles.image} src={aztec} />
+            <Typography variant='text3'>Aztec / BattleZips-Noir</Typography>
+          </Flex>
+          <iframe
+            allowFullScreen
+            height='250px'
+            src='https://www.youtube.com/embed/videoseries?list=PLabpoAlaCBY3SM6xHmZCOhPHlmLB4EY6H'
+            style={{ border: 'none', marginTop: '24px' }}
+            title='BattleZips-Noir'
+            width='100%'
+          />
+          <Typography paragraph style={{ marginTop: '24px' }} variant='body1'>
+            <a href='https://aztec.network/'>Aztec</a> is a pioneer in the world
+            of zero-knowledge cryptography. They are the birthplace of the{' '}
+            <a href='https://eprint.iacr.org/2019/953.pdf'>PlonK</a> proving
+            system and the creators of{' '}
+            <a href='https://aztec.network/connect'>Aztec Connect</a> (now
+            sunset). Their latest contribution to the world of zero-knowledge
+            cryptography is the creation of a new ZK DSL named{' '}
+            <a href='https://noir-lang.org/'>Noir</a>. The language aims to
+            relieve the burdenous tasks of learning the underlying mathematics
+            and cryptographic principles that enable ZK. <br />
+            <br /> Mach 34 was awarded a grant by Aztec to produce a video
+            series and written documentation demonstrating how to write circuits
+            in Noir and integrate them in a frontend application. We did this
+            re-writing the{' '}
+            <a href='https://github.com/BattleZips/BattleZips'>
+              BattleZips
+            </a>{' '}
+            circuits from Circom into Noir.
+          </Typography>
+        </div>
+        <div className={styles.card} id='blitz' style={{ marginTop: '32px' }}>
           <Flex alignItems='center' gap='16px'>
             <img alt='Blitz' className={styles.image} src={blitz} />
             <Typography variant='text3'>Blitz</Typography>
@@ -110,7 +142,7 @@ export default function Portfolio(): JSX.Element {
         <div
           className={styles.card}
           id='battlezips'
-          style={{ marginTop: '32px' }}
+          style={{ margin: '32px 0px 0px auto' }}
         >
           <Flex alignItems='center' gap='16px'>
             <img
