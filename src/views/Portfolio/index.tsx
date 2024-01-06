@@ -69,17 +69,37 @@ export default function Portfolio(): JSX.Element {
                 <b>{project.videoHeader}</b>
               </Typography>
             )}
-            <iframe
-              allowFullScreen
-              height='250px'
-              src={project.videoLink}
-              style={{ border: 'none', marginTop: '24px' }}
-              title={project.videoTitle}
-              width='100%'
-            />
+            {project.videoLink && (
+              <iframe
+                allowFullScreen
+                height='250px'
+                src={project.videoLink}
+                style={{ border: 'none', marginTop: '24px' }}
+                title={project.videoTitle}
+                width='100%'
+              />
+            )}
             <Typography paragraph style={{ marginTop: '24px' }} variant='body1'>
               {project.content}
             </Typography>
+            <div style={{ marginTop: '16px' }}>
+              {!!project.links?.length && (
+                <>
+                  <Typography style={{ color: '#10995A' }} variant='text5'>
+                    <b>Links</b>
+                  </Typography>
+                  <ul>
+                    {project.links.map(({ link, text }) => (
+                      <li style={{ marginTop: '8px' }}>
+                        <a href={link} rel='noreferrer' target='_blank'>
+                          {text || link}
+                        </a>
+                      </li>
+                    ))}
+                  </ul>
+                </>
+              )}
+            </div>
           </div>
         ))}
       </div>
