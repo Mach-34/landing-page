@@ -3,7 +3,6 @@ import MainLayout from 'layouts/MainLayout';
 import { createUseStyles } from 'react-jss';
 import Slide from 'react-reveal/Slide';
 import Flex from 'components/Flex';
-import brian from 'assets/images/brian.jpeg';
 import ian from 'assets/images/ian.png';
 import jack from 'assets/images/jack.png';
 import { useMedia } from 'contexts/MediaContext';
@@ -145,60 +144,6 @@ export default function Team(): JSX.Element {
               <img alt='Ian Brighton' className={styles.image} src={ian} />
             </Flex>
           </Flex>
-        </Slide>
-        <Slide left>
-          <Flex
-            alignItems={sm ? 'flex-start' : 'center'}
-            direction={sm ? 'row' : 'column'}
-            gap='16px'
-          >
-            <img alt='Brian Wilkes' className={styles.image} src={brian} />
-            <div>
-              <Typography variant='text3'>Brian Wilkes</Typography>
-              <Typography
-                style={{ color: '#969696', marginTop: '4px' }}
-                variant='text6'
-              >
-                <i>COO</i>
-              </Typography>
-              <Flex alignItems='center' gap='8px' mt='12px'>
-                <a
-                  href='https://github.com/outsider-analytics'
-                  rel='noreferrer'
-                  target='_blank'
-                >
-                  <Github fill='black' />
-                </a>
-                <a
-                  href='https://www.linkedin.com/in/brianwilkescfa/'
-                  rel='noreferrer'
-                  target='_blank'
-                >
-                  <Linkedin fill='black' />
-                </a>
-                {/* <a
-                  href='mailto:brian@mach34.space'
-                  rel='noreferrer'
-                  target='_blank'
-                >
-                  <EnvelopeFill fill='black' />
-                </a> */}
-              </Flex>
-              <Typography
-                paragraph
-                style={{ maxWidth: '450px', marginTop: '12px' }}
-                variant='body2'
-              >
-                Generalist deep in data science, finance, and company
-                operations. 2022: EF PSE Grantee finding and analyzing ZK
-                Circuits on Ethereum. 2023 Ethereum Foundation Data Merge Prize
-                Winner: MEV analysis for DEXs. Speaker at Devcon 6 and EthDenver
-                2023 on tangible ZK metrics on chain. Full CFA Charter Holder
-                since 2020.
-              </Typography>
-            </div>
-          </Flex>
-          <div style={{ width: '50px' }} />
         </Slide>
       </div>
     </MainLayout>
