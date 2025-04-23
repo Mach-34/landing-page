@@ -50,6 +50,12 @@ export default function Portfolio(): JSX.Element {
   return (
     <MainLayout>
       <div className={styles.content}>
+        <Typography component="h1" style={{ color: '#10995A', marginBottom: '16px' }} variant='text2'>
+          Portfolio
+        </Typography>
+        <Typography paragraph style={{ color: '#000000', marginBottom: '32px' }} variant='text4'>
+          Explore our diverse range of Web3 projects, showcasing expertise in EVM Smart Contracts, Zero Knowledge solutions, and more.
+        </Typography>
         {PROJECTS.map((project, index) => (
           <div className={styles.card} style={cardMargin(index)}>
             <Flex alignItems='center' gap='16px'>

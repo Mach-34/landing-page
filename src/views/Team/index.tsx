@@ -26,6 +26,12 @@ export default function Team(): JSX.Element {
   return (
     <MainLayout>
       <div className={styles.content}>
+        <Typography component="h1" style={{ color: '#10995A', marginBottom: '16px' }} variant='text2'>
+          Meet the Team
+        </Typography>
+        <Typography paragraph style={{ color: '#000000', marginBottom: '32px' }} variant='text4'>
+          Learn more about the talented individuals behind Mach34, driving innovation in Web3 and Zero Knowledge solutions.
+        </Typography>
         <Slide left>
           <Flex
             alignItems={sm ? 'flex-start' : 'center'}
@@ -33,7 +39,7 @@ export default function Team(): JSX.Element {
             gap='16px'
             mb='48px'
           >
-            <img alt='Jack Gilcrest' className={styles.image} src={jack} />
+            <img alt='Jack Gilcrest - Co-Founder and CEO of Mach34' className={styles.image} src={jack} />
             <div>
               <Typography variant='text3'>Jack Gilcrest</Typography>
               <Typography
@@ -141,7 +147,7 @@ export default function Team(): JSX.Element {
                   subgraph development.
                 </Typography>
               </div>
-              <img alt='Ian Brighton' className={styles.image} src={ian} />
+              <img alt='Ian Brighton - Co-Founder and CTO of Mach34' className={styles.image} src={ian} />
             </Flex>
           </Flex>
         </Slide>
