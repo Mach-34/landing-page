@@ -62,7 +62,7 @@ export default function Header(): JSX.Element {
 
   return (
     <>
-      <div className={styles.container}>
+      <header className={styles.container}>
         <img
           alt='Logo'
           className={styles.logo}
@@ -87,7 +87,7 @@ export default function Header(): JSX.Element {
             onClick={() => setExpanded(true)}
           />
         )}
-      </div>
+      </header>
       {!sm && <MobileMenu onHide={() => setExpanded(false)} open={expanded} />}
     </>
   );

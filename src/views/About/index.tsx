@@ -50,8 +50,22 @@ export default function About(): JSX.Element {
   return (
     <MainLayout>
       <Fade>
-        <div className={styles.content}>
-          <div className={styles.section} style={{ textAlign: 'left' }}>
+        <div className={styles.content} role="main">
+          <div className={styles.section} style={{ textAlign: 'left' }} aria-labelledby="about-description">
+            <Typography
+              component="h1"
+              style={{ color: '#000000' }}
+              variant={sm ? 'text3' : 'text2'}
+            >
+              About Mach34
+            </Typography>
+            <Typography
+              component="h2"
+              style={{ color: '#000000' }}
+              variant={sm ? 'text3' : 'text2'}
+            >
+              Web3 Consultancy and Zero Knowledge Experts
+            </Typography>
             <Typography
               style={{ color: '#000000' }}
               variant={sm ? 'text3' : 'text2'}
@@ -93,9 +107,10 @@ export default function About(): JSX.Element {
             </Typography>
           </div>
           <img
-            alt='Mach34 Team On-Stage at EthDenver'
+            alt='Mach34 Team On-Stage at EthDenver - Web3 Consultancy'
             className={styles.image}
             src={about}
+            aria-describedby="about-description"
           />
         </div>
       </Fade>

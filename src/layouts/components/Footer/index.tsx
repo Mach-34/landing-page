@@ -21,7 +21,7 @@ const useStyles = createUseStyles({
 export default function Footer(): JSX.Element {
   const styles = useStyles();
   return (
-    <div className={styles.wrapper}>
+    <footer className={styles.wrapper}>
       <div>
         <Typography style={{ color: 'white' }} variant='text5'>
           @ Copyright {new Date().getFullYear()} Mach34
@@ -46,6 +46,6 @@ export default function Footer(): JSX.Element {
           <Youtube fill='white' />
         </a>
       </Flex>
-    </div>
+    </footer>
   );
 }

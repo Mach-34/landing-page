@@ -15,6 +15,7 @@ type TypographyProps = {
   paragraph?: boolean;
   style?: CSSProperties;
   variant: TypographyVariant;
+  component?: keyof JSX.IntrinsicElements; // Allow specifying HTML elements
 };
 
 export default function Typography({
@@ -23,12 +24,13 @@ export default function Typography({
   paragraph = false,
   style,
   variant,
+  component: Component = 'div', // Default to 'div'
 }: TypographyProps): JSX.Element {
   const styles = useStyles({ children, onClick, paragraph, variant });
   return (
-    <div className={styles.text} onClick={onClick} style={{ ...style }}>
+    <Component className={styles.text} onClick={onClick} style={{ ...style }}>
       {children}
-    </div>
+    </Component>
   );
 }
 

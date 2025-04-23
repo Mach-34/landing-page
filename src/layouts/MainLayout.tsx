@@ -37,7 +37,9 @@ export default function MainLayout({ children }: MainLayoutProps): JSX.Element {
     <div style={{ position: 'relative' }}>
       <Header />
       <img alt='Background' className={styles.backgroundImage} src={logo} />
-      <div className={styles.content}>{children}</div>
+      <main className={styles.content}>
+        {children}
+      </main>
       <Footer />
     </div>
   );

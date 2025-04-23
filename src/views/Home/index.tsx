@@ -24,6 +24,11 @@ export default function Home(): JSX.Element {
             Mach34
           </Fade>
         </Typography>
+        <Typography style={{ color: '#10995A' }} variant='heading2'>
+          <Fade bottom cascade>
+            Full-Stack Web3 Consultancy
+          </Fade>
+        </Typography>
         <Typography
           paragraph
           style={{
@@ -37,6 +42,22 @@ export default function Home(): JSX.Element {
             <div>
               A full-stack web3 consultancy specializing in applied zero
               knowledge cryptography
+            </div>
+          </Fade>
+        </Typography>
+        <Typography
+          paragraph
+          style={{
+            color: '#10995A',
+            margin: '16px auto 0px auto',
+            maxWidth: '600px',
+            display: 'none',
+          }}
+          variant='text4'
+        >
+          <Fade bottom delay={1500}>
+            <div>
+              Specializing in Smart Contracts, Zero Knowledge and Programmable Cryptography solutions, Noir, Halo2, Circom, Multisig Wallets, and more.
             </div>
           </Fade>
         </Typography>

@@ -5,7 +5,7 @@ import { ThemeProvider } from 'react-jss';
 import MediaProvider from 'contexts/MediaContext';
 import { theme } from 'theme';
 
-ReactGA.initialize(process.env.REACT_APP_GOOGLE_TRACKING_ID ?? '');
+// ReactGA.initialize(process.env.REACT_APP_GOOGLE_TRACKING_ID ?? '');
 
 function App() {
   return (
